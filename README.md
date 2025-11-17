@@ -13,19 +13,20 @@
 ## Установка и запуск
 
 ### 1. Установка NGINX (Ubuntu)
-sudo apt update
+```sudo apt updat```
 sudo apt install nginx
 
 ### Проверка статуса NGINX
-systemctl status nginx
+```systemctl status nginx```
 
 ### 2. Проверка конфигурации
-sudo nginx -t
+```sudo nginx -t```
 
 ### 3. Перезапуск NGINX
-sudo systemctl restart nginx
+```sudo systemctl restart nginx```
 
 ## Структура репозитория
+```
 nginx-project/
 │── nginx.conf               # Основной конфигурационный файл NGINX
 │── README.md                # Документация проекта
@@ -37,21 +38,22 @@ nginx-project/
 │     └── example.conf       # Активированная конфигурация (копия)
 │
 └── html/
-      └── index.html         # Статическая веб-страница
+      └── index.html         # Статическая веб-страница 
+      ```
 ### 4.Пример базового server block 
+```
 server {
-    listen 80;
-    server_name localhost;
-
-    root /var/www/nginx-project/html;
-    index index.html;
-
-    location / {
-        try_files $uri $uri/ =404;
+ listen 80;
+ server_name localhost;
+ root /var/www/nginx-project/html;
+ index index.html;
+ location / {
+  try_files $uri $uri/ =404;
     }
 }
+```
 ### 5.Пример URL 
-http://localhost
+```http://localhost```
 ### 6.Технические требования 
 NGINX: 1.18+
 
