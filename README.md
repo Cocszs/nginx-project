@@ -39,10 +39,10 @@ nginx-project/
 │
 └── html/
       └── index.html         # Статическая веб-страница 
-      ```
-### 4.Пример базового server block 
 ```
-server {
+
+### 4.Пример базового server block
+```server {
  listen 80;
  server_name localhost;
  root /var/www/nginx-project/html;
@@ -52,6 +52,7 @@ server {
     }
 }
 ```
+
 ### 5.Пример URL 
 ```http://localhost```
 ### 6.Технические требования 
